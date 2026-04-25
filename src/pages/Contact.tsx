@@ -1,6 +1,6 @@
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Mail, Linkedin, Github, MessageSquare, ChevronRight, Send, User, Phone, FileText, Activity } from "lucide-react";
-import { useState } from "react";
 
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzAtus5Mjne8z2k5Edz13_VvMKd0_D7XaukAHIlz1JfPGLk-Y4VoPEzYAuDW0RMSHUl-Q/exec';
 
@@ -45,7 +45,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto pt-8">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto pt-8">
           <a 
             href="mailto:contactaslamsir@gmail.com"
             className="card bg-brand-surface border-brand-blue/20 hover:border-brand-blue flex items-center gap-6 p-6 group transition-all text-left"
@@ -60,7 +60,9 @@ export default function Contact() {
           </a>
 
           <a 
-            href="#"
+            href="https://www.linkedin.com/in/aslamdevops"
+            target="_blank"
+            rel="noopener noreferrer"
             className="card bg-brand-surface border-brand-blue/20 hover:border-brand-blue flex items-center gap-6 p-6 group transition-all text-left"
           >
             <div className="w-14 h-14 rounded-full bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors shrink-0">
@@ -68,7 +70,20 @@ export default function Contact() {
             </div>
             <div>
               <div className="font-bold text-lg">LinkedIn</div>
-              <div className="text-xs text-brand-text-dim">Professional Network</div>
+              <div className="text-xs text-brand-text-dim">@aslamdevops</div>
+            </div>
+          </a>
+
+          <a 
+            href="tel:+917997533193"
+            className="card bg-brand-surface border-brand-blue/20 hover:border-brand-blue flex items-center gap-6 p-6 group transition-all text-left"
+          >
+            <div className="w-14 h-14 rounded-full bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors shrink-0">
+              <Phone className="w-6 h-6" />
+            </div>
+            <div>
+              <div className="font-bold text-lg">Phone</div>
+              <div className="text-xs text-brand-text-dim">+91 7997533193</div>
             </div>
           </a>
         </div>
@@ -207,16 +222,6 @@ export default function Contact() {
         </motion.div>
       </div>
 
-      <footer className="text-center pt-24 space-y-4">
-        <div className="flex justify-center gap-6">
-          <a href="#" className="text-brand-text-dim hover:text-brand-blue transition-colors"><Linkedin className="w-6 h-6" /></a>
-          <a href="#" className="text-brand-text-dim hover:text-brand-blue transition-colors"><Github className="w-6 h-6" /></a>
-          <a href="mailto:contactaslamsir@gmail.com" className="text-brand-text-dim hover:text-brand-blue transition-colors"><Mail className="w-6 h-6" /></a>
-        </div>
-        <p className="text-[10px] uppercase tracking-widest font-bold text-brand-text-dim/50">
-          &copy; {new Date().getFullYear()} Shaik Portfolio • Enterprise Scalability
-        </p>
-      </footer>
     </div>
   );
 }
