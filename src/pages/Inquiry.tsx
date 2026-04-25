@@ -70,6 +70,9 @@ export default function Inquiry() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-8"
           >
+            {/* Security Key */}
+            <input type="hidden" name="key" value="Shaik_Secure_2024_Key" />
+
             <div className="grid md:grid-cols-2 gap-8">
                <div className="card space-y-6">
                  <div className="flex items-center gap-3 border-b border-brand-border pb-4">
