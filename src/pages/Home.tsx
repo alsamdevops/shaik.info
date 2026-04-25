@@ -15,10 +15,10 @@ export default function Home() {
         viewport={{ once: true }}
         className="card md:col-span-6 md:row-span-3 flex flex-col justify-center relative overflow-hidden group"
       >
-        <div className="absolute inset-0 z-0 opacity-10 group-hover:opacity-20 transition-opacity">
+        <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity">
           <img 
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=1200" 
-            alt="Server Background" 
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200" 
+            alt="Infrastructure Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
