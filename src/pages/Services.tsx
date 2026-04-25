@@ -9,13 +9,23 @@ export default function Services() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-center space-y-4"
+        className="text-center space-y-4 card gradient-card p-12 relative overflow-hidden"
       >
-        <div className="label">Capabilities & Implementation</div>
-        <h1 className="text-4xl md:text-6xl font-display font-black tracking-tighter">Architecture & <span className="text-brand-blue">Solutions</span></h1>
-        <p className="desc text-lg max-w-2xl mx-auto">
-          A comprehensive suite of DevOps and architectural services tailored for healthcare, ecommerce, and enterprise systems.
-        </p>
+        <div className="absolute inset-0 z-0 opacity-[0.05]">
+          <img 
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200" 
+            alt="Circuit" 
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+        <div className="relative z-10">
+          <div className="label">Capabilities & Implementation</div>
+          <h1 className="text-4xl md:text-6xl font-display font-black tracking-tighter">Architecture & <span className="text-brand-blue">Solutions</span></h1>
+          <p className="desc text-lg max-w-2xl mx-auto">
+            A comprehensive suite of DevOps and architectural services tailored for healthcare, ecommerce, and enterprise systems.
+          </p>
+        </div>
       </motion.div>
 
       {/* Primary Stack */}

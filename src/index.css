@@ -54,3 +54,20 @@
   @apply text-brand-text-dim text-sm leading-relaxed;
 }
 
+.img-overlay {
+  @apply relative after:content-[''] after:absolute after:inset-0 after:bg-brand-bg/40;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-brand-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-border rounded-full hover:bg-brand-blue transition-colors;
+}
+
