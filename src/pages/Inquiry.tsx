@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
-import { Send, FileText, Globe, Search, ShieldCheck, Loader2 } from "lucide-react";
+import { Send, FileText, Globe, Search, ShieldCheck, Loader2, User, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwOBysboBRaKlYysQdo5jg5DM8AQXpjpWceutIFoP7mTpoBhyn3Ljg9A_AaubvWAGxT/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzAtus5Mjne8z2k5Edz13_VvMKd0_D7XaukAHIlz1JfPGLk-Y4VoPEzYAuDW0RMSHUl-Q/exec';
 
 export default function Inquiry() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -29,18 +29,28 @@ export default function Inquiry() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto w-full pb-24 px-4 md:px-0">
+    <div className="max-w-7xl mx-auto w-full pb-24 px-4 md:px-0">
       <div className="space-y-12">
         <motion.div
            initial={{ opacity: 0, y: 20 }}
            animate={{ opacity: 1, y: 0 }}
-           className="text-center space-y-4"
+           className="text-center space-y-4 card gradient-card p-12 relative overflow-hidden"
         >
-          <div className="label">Project Scoping</div>
-          <h1 className="text-4xl md:text-6xl font-display font-black tracking-tighter">Submit Your <span className="text-brand-blue">Query</span></h1>
-          <p className="desc text-lg max-w-2xl mx-auto">
-            Provide details about your current infrastructure or upcoming project. I'll perform a preliminary audit and reach out with a strategic roadmap.
-          </p>
+          <div className="absolute inset-0 z-0 opacity-[0.05]">
+            <img 
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" 
+              alt="Data Architecture" 
+              className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+          <div className="relative z-10">
+            <div className="label">Project Scoping</div>
+            <h1 className="text-4xl md:text-6xl font-display font-black tracking-tighter">Submit Your <span className="text-brand-blue">Query</span></h1>
+            <p className="desc text-lg max-w-2xl mx-auto">
+              Provide details about your current infrastructure or upcoming project. I'll perform a preliminary audit and reach out with a strategic roadmap.
+            </p>
+          </div>
         </motion.div>
 
         {status === 'success' ? (
@@ -76,6 +86,29 @@ export default function Inquiry() {
             <div className="grid md:grid-cols-2 gap-8">
                <div className="card space-y-6">
                  <div className="flex items-center gap-3 border-b border-brand-border pb-4">
+                   <User className="w-5 h-5 text-brand-blue" />
+                   <h3 className="font-bold">Contact Info</h3>
+                 </div>
+                 <div className="space-y-4">
+                   <div className="space-y-2">
+                     <label className="text-[10px] font-black uppercase tracking-widest text-brand-text-dim">Full Name</label>
+                     <input name="name" required className="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-2.5 text-sm" placeholder="Your Name" />
+                   </div>
+                   <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black uppercase tracking-widest text-brand-text-dim">Email</label>
+                      <input name="email" type="email" required className="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-2.5 text-sm" placeholder="email@example.com" />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black uppercase tracking-widest text-brand-text-dim">Phone</label>
+                      <input name="phone" type="tel" required className="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-2.5 text-sm" placeholder="+123..." />
+                    </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div className="card space-y-6">
+                 <div className="flex items-center gap-3 border-b border-brand-border pb-4">
                    <Globe className="w-5 h-5 text-brand-blue" />
                    <h3 className="font-bold">Project Details</h3>
                  </div>
@@ -94,8 +127,9 @@ export default function Inquiry() {
                    </div>
                  </div>
                </div>
+            </div>
 
-               <div className="card space-y-6">
+            <div className="card space-y-6">
                  <div className="flex items-center gap-3 border-b border-brand-border pb-4">
                    <Search className="w-5 h-5 text-brand-blue" />
                    <h3 className="font-bold">Technical Scope</h3>
@@ -118,7 +152,6 @@ export default function Inquiry() {
                     </div>
                  </div>
                </div>
-            </div>
 
             <div className="card space-y-6">
               <div className="flex items-center gap-3 border-b border-brand-border pb-4">
