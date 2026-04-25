@@ -42,7 +42,7 @@ export default function App() {
 
         <footer className="mt-8 pt-8 max-w-7xl mx-auto w-full border-t border-brand-border space-y-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-brand-text-dim text-[11px]">
-            <div>&copy; {new Date().getFullYear()} Shaik | Senior DevOps Architect Portfolio | Built with AI Studio</div>
+            <div>&copy; {new Date().getFullYear()} Shaik | Senior DevOps Architect Portfolio</div>
             <div className="flex gap-6 items-center">
               <a href="https://www.linkedin.com/in/aslamdevops" target="_blank" rel="noopener noreferrer" className="hover:text-brand-blue transition-colors flex items-center gap-1">
                 <Linkedin className="w-3 h-3" /> LINKEDIN
