@@ -6,21 +6,21 @@ const CATEGORIES = [
     id: "kubernetes",
     title: "Kubernetes & Orchestration",
     icon: Layers,
-    image: "https://images.unsplash.com/photo-1664402092120-00aec1462057?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1667372333374-0d3c013b28da?auto=format&fit=crop&q=80&w=1200",
     description: "Designing and maintaining production-grade EKS/GKE clusters with automated scaling and service mesh integration using ArgoCD."
   },
   {
     id: "aws",
     title: "AWS Cloud Infrastructure",
     icon: Cloud,
-    image: "https://images.unsplash.com/photo-1483362089422-777610006767?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
     description: "Multi-region architecture design, ensuring 99.99% availability for enterprise healthcare and ecommerce platforms."
   },
   {
     id: "cicd",
     title: "CI/CD & Jenkins Pipeline",
     icon: Workflow,
-    image: "https://images.unsplash.com/photo-1518770665346-38a7946955b2?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1618401471353-b98aadebc25a?auto=format&fit=crop&q=80&w=1200",
     description: "High-velocity Jenkins pipelines that power rapid delivery using declarative syntax and shared libraries."
   }
 ];
@@ -29,19 +29,19 @@ const SHOWCASE_PROJECTS = [
   {
     title: "Infrastructure as Code",
     subtitle: "Terraform Module Architecture",
-    image: "https://images.unsplash.com/photo-1461747583337-cc304753f5df?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=800",
     tags: ["Terraform", "HCL", "Providers"]
   },
   {
     title: "Cluster Guard",
     subtitle: "ArgoCD & Kubernetes Security",
-    image: "https://images.unsplash.com/photo-1664402092120-00aec1462057?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&q=80&w=800",
     tags: ["ArgoCD", "K8s", "GitOps"]
   },
   {
     title: "SwiftPipe",
     subtitle: "Automated Jenkins Pipeline Architecture",
-    image: "https://images.unsplash.com/photo-1518770665346-38a7946955b2?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
     tags: ["Jenkins", "Docker", "Ansible"]
   }
 ];
@@ -89,11 +89,11 @@ export default function Projects() {
               <img 
                 src={cat.image} 
                 alt={cat.title} 
-                className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/40 to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/60 to-brand-bg/10 z-10" />
             
             <div className="relative z-20 mt-auto p-8 space-y-4">
               <div className="w-12 h-12 rounded-xl bg-brand-blue/20 backdrop-blur-md flex items-center justify-center border border-brand-blue/30 text-brand-blue">
@@ -194,11 +194,11 @@ export default function Projects() {
               </div>
           </div>
         </div>
-        <div className="w-full md:w-1/3 aspect-square rounded-3xl overflow-hidden border border-brand-border text-brand-blue">
+        <div className="w-full md:w-1/3 aspect-square rounded-3xl overflow-hidden border border-brand-border shadow-2xl shadow-brand-blue/20">
           <img 
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=800" 
+            src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800" 
             alt="Physical Infrastructure" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             referrerPolicy="no-referrer"
           />
         </div>
