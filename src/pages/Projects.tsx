@@ -6,43 +6,43 @@ const CATEGORIES = [
     id: "kubernetes",
     title: "Kubernetes & Orchestration",
     icon: Layers,
-    image: "https://images.unsplash.com/photo-1667372333374-0d3c013b28da?auto=format&fit=crop&q=80&w=1200",
-    description: "Designing and maintaining production-grade EKS/GKE clusters with automated scaling and service mesh integration."
+    image: "https://images.unsplash.com/photo-1664402092120-00aec1462057?auto=format&fit=crop&q=80&w=1200",
+    description: "Designing and maintaining production-grade EKS/GKE clusters with automated scaling and service mesh integration using ArgoCD."
   },
   {
     id: "aws",
     title: "AWS Cloud Infrastructure",
     icon: Cloud,
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1483362089422-777610006767?auto=format&fit=crop&q=80&w=1200",
     description: "Multi-region architecture design, ensuring 99.99% availability for enterprise healthcare and ecommerce platforms."
   },
   {
     id: "cicd",
-    title: "CI/CD & Automation",
+    title: "CI/CD & Jenkins Pipeline",
     icon: Workflow,
-    image: "https://images.unsplash.com/photo-1618401471353-b98aadebc25a?auto=format&fit=crop&q=80&w=1200",
-    description: "High-velocity Jenkins and GitHub Actions pipelines that power rapid delivery without compromising on security."
+    image: "https://images.unsplash.com/photo-1518770665346-38a7946955b2?auto=format&fit=crop&q=80&w=1200",
+    description: "High-velocity Jenkins pipelines that power rapid delivery using declarative syntax and shared libraries."
   }
 ];
 
 const SHOWCASE_PROJECTS = [
   {
-    title: "EcoSystem Migration",
-    subtitle: "Healthcare Data Center to AWS",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=800",
-    tags: ["Terraform", "AWS", "EKS"]
+    title: "Infrastructure as Code",
+    subtitle: "Terraform Module Architecture",
+    image: "https://images.unsplash.com/photo-1461747583337-cc304753f5df?auto=format&fit=crop&q=80&w=800",
+    tags: ["Terraform", "HCL", "Providers"]
   },
   {
     title: "Cluster Guard",
-    subtitle: "Enterprise Kubernetes Security",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
-    tags: ["Istio", "Calico", "Helm"]
+    subtitle: "ArgoCD & Kubernetes Security",
+    image: "https://images.unsplash.com/photo-1664402092120-00aec1462057?auto=format&fit=crop&q=80&w=800",
+    tags: ["ArgoCD", "K8s", "GitOps"]
   },
   {
     title: "SwiftPipe",
     subtitle: "Automated Jenkins Pipeline Architecture",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-    tags: ["Groovy", "Docker", "Ansible"]
+    image: "https://images.unsplash.com/photo-1518770665346-38a7946955b2?auto=format&fit=crop&q=80&w=800",
+    tags: ["Jenkins", "Docker", "Ansible"]
   }
 ];
 
@@ -89,7 +89,7 @@ export default function Projects() {
               <img 
                 src={cat.image} 
                 alt={cat.title} 
-                className="w-full h-full object-cover grayscale opacity-30 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -164,7 +164,7 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* Huawei Cloud Spotlight */}
+      {/* Network Spotlight */}
       <motion.section 
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -173,31 +173,31 @@ export default function Projects() {
       >
         <div className="flex-1 space-y-6">
           <div className="flex items-center gap-3">
-            <div className="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded text-[10px] font-bold text-red-400 uppercase tracking-widest italic">
-              Specialized Expertise
+            <div className="px-3 py-1 bg-brand-blue/10 border border-brand-blue/20 rounded text-[10px] font-bold text-brand-blue uppercase tracking-widest italic">
+              Network Engineering
             </div>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-black tracking-tighter">
-            Huawei Cloud <span className="text-red-500">Solutions</span>
+            Physical Cloud <span className="text-brand-blue">Networking</span>
           </h2>
           <p className="desc text-lg">
-            Leveraging Huawei Cloud's unique infrastructure capabilities for high-performance computing and enterprise-grade reliability in Asian and Middle Eastern markets.
+            Designing redundant physical network architectures and hybrid cloud connectivity. Bridging on-premise hardware with elastic cloud providers through managed networking.
           </p>
           <div className="flex gap-8">
               <div>
-                <div className="text-lg font-bold">CCI</div>
-                <div className="text-[10px] text-brand-text-dim uppercase font-bold">Cloud Container Instance</div>
+                <div className="text-lg font-bold">Hybrid</div>
+                <div className="text-[10px] text-brand-text-dim uppercase font-bold">Direct Connect / VPN</div>
               </div>
               <div>
-                <div className="text-lg font-bold">CCE</div>
-                <div className="text-[10px] text-brand-text-dim uppercase font-bold">Cloud Container Engine</div>
+                <div className="text-lg font-bold">Resilience</div>
+                <div className="text-[10px] text-brand-text-dim uppercase font-bold">BGP Routing & Failover</div>
               </div>
           </div>
         </div>
-        <div className="w-full md:w-1/3 aspect-square rounded-3xl overflow-hidden border border-brand-border">
+        <div className="w-full md:w-1/3 aspect-square rounded-3xl overflow-hidden border border-brand-border text-brand-blue">
           <img 
-            src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800" 
-            alt="Huawei Infrastructure" 
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=800" 
+            alt="Physical Infrastructure" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />

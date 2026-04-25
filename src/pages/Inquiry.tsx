@@ -138,7 +138,7 @@ export default function Inquiry() {
                     <div className="space-y-2">
                       <label className="text-[10px] font-black uppercase tracking-widest text-brand-text-dim">Environment</label>
                       <div className="flex flex-wrap gap-2 pt-1">
-                        {['AWS', 'Azure', 'Huawei Cloud', 'Hybrid'].map(item => (
+                        {['AWS', 'Azure', 'Physical/Hybrid', 'Huawei Cloud'].map(item => (
                           <label key={item} className="flex items-center gap-2 px-3 py-1.5 rounded-md border border-brand-border text-xs cursor-pointer hover:border-brand-blue transition-colors has-[:checked]:bg-brand-blue/10 has-[:checked]:border-brand-blue">
                              <input type="checkbox" name="environment" value={item} className="hidden" />
                              {item}

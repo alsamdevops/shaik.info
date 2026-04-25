@@ -90,7 +90,7 @@ export default function Home() {
         <div className="mt-4 space-y-5">
           <div>
             <div className="flex justify-between items-center mb-2">
-              <span className="text-[12px] font-medium">Cloud (AWS/Azure/Huawei)</span>
+              <span className="text-[12px] font-medium">Cloud (AWS/Azure) & Physical Networking</span>
               <span className="text-[12px] font-bold text-brand-success font-mono">96%</span>
             </div>
             <div className="h-1 bg-brand-border rounded-full overflow-hidden">
