@@ -7,7 +7,7 @@ const CATEGORIES = [
     id: "kubernetes",
     title: "Kubernetes & Orchestration",
     icon: Layers,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&q=80&w=1200",
     description: "Designing and maintaining production-grade EKS/GKE clusters with automated scaling and service mesh integration using ArgoCD."
   },
   {
