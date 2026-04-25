@@ -90,13 +90,13 @@ export default function Home() {
         <div className="mt-4 space-y-5">
           <div>
             <div className="flex justify-between items-center mb-2">
-              <span className="text-[12px] font-medium">Cloud (AWS/Azure)</span>
-              <span className="text-[12px] font-bold text-brand-success font-mono">95%</span>
+              <span className="text-[12px] font-medium">Cloud (AWS/Azure/Huawei)</span>
+              <span className="text-[12px] font-bold text-brand-success font-mono">96%</span>
             </div>
             <div className="h-1 bg-brand-border rounded-full overflow-hidden">
               <motion.div 
                 initial={{ width: 0 }}
-                whileInView={{ width: '95%' }}
+                whileInView={{ width: '96%' }}
                 className="h-full bg-brand-success" 
               />
             </div>

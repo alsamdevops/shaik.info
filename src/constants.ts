@@ -33,6 +33,7 @@ export const SKILLS = [
   { name: "Docker", level: "Expert", icon: Package, color: "text-cyan-500" },
   { name: "AWS", level: "Senior", icon: Cloud, color: "text-orange-500" },
   { name: "Terraform", level: "Expert", icon: Code2, color: "text-purple-500" },
+  { name: "Huawei Cloud", level: "Senior", icon: Cloud, color: "text-red-400" },
   { name: "Jenkins", level: "Expert", icon: Workflow, color: "text-red-500" },
   { name: "Python", level: "Advanced", icon: Terminal, color: "text-yellow-500" },
   { name: "Bash", level: "Expert", icon: Cpu, color: "text-emerald-500" },

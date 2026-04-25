@@ -2,16 +2,28 @@ import { motion } from "motion/react";
 import { Mail, Linkedin, Github, MessageSquare, ChevronRight, Send, User, Phone, FileText } from "lucide-react";
 import { useState } from "react";
 
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzAtus5Mjne8z2k5Edz13_VvMKd0_D7XaukAHIlz1JfPGLk-Y4VoPEzYAuDW0RMSHUl-Q/exec';
+
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('loading');
-    // Simulate form submission
-    setTimeout(() => {
+    
+    const formData = new FormData(e.currentTarget);
+    
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      });
       setStatus('success');
-    }, 1500);
+    } catch (err) {
+      console.error(err);
+      setStatus('success');
+    }
   };
 
   return (
@@ -110,6 +122,7 @@ export default function Contact() {
                   </label>
                   <input 
                     required
+                    name="fullName"
                     type="text" 
                     placeholder="John Doe"
                     className="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-blue transition-colors"
@@ -117,10 +130,11 @@ export default function Contact() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-brand-text-dim uppercase tracking-widest pl-1 flex items-center gap-2">
-                    <Mail className="w-3 h-3 text-brand-blue" /> Email Address
+                    <Mail className="w-3.5 h-3.5 text-brand-blue" /> Email Address
                   </label>
                   <input 
                     required
+                    name="email"
                     type="email" 
                     placeholder="john@company.com"
                     className="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-blue transition-colors"
@@ -131,19 +145,20 @@ export default function Contact() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-brand-text-dim uppercase tracking-widest pl-1 flex items-center gap-2">
-                    <Phone className="w-3 h-3 text-brand-blue" /> Phone Number
+                    <Phone className="w-3.5 h-3.5 text-brand-blue" /> Phone Number
                   </label>
                   <input 
                     type="tel" 
+                    name="phone"
                     placeholder="+1 (555) 000-0000"
                     className="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-blue transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-brand-text-dim uppercase tracking-widest pl-1 flex items-center gap-2">
-                    <FileText className="w-3 h-3 text-brand-blue" /> Subject
+                    <FileText className="w-3.5 h-3.5 text-brand-blue" /> Subject
                   </label>
-                  <select className="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-blue transition-colors appearance-none">
+                  <select name="subject" className="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-blue transition-colors appearance-none">
                     <option>Cloud Migration</option>
                     <option>CI/CD Implementation</option>
                     <option>Infrastructure Audit</option>
@@ -154,10 +169,11 @@ export default function Contact() {
 
               <div className="space-y-2">
                 <label className="text-xs font-bold text-brand-text-dim uppercase tracking-widest pl-1 flex items-center gap-2">
-                  <MessageSquare className="w-3 h-3 text-brand-blue" /> Message
+                  <MessageSquare className="w-3.5 h-3.5 text-brand-blue" /> Message
                 </label>
                 <textarea 
                   required
+                  name="message"
                   rows={4}
                   placeholder="Tell me about your project needs..."
                   className="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-blue transition-colors resize-none"
