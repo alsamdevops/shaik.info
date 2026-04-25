@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { ExternalLink, Layers, Cpu, Cloud, Workflow, Server, ChevronRight } from "lucide-react";
 
 const CATEGORIES = [
@@ -6,7 +7,7 @@ const CATEGORIES = [
     id: "kubernetes",
     title: "Kubernetes & Orchestration",
     icon: Layers,
-    image: "https://images.unsplash.com/photo-1667372333374-0d3c013b28da?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=1200",
     description: "Designing and maintaining production-grade EKS/GKE clusters with automated scaling and service mesh integration using ArgoCD."
   },
   {
@@ -20,7 +21,7 @@ const CATEGORIES = [
     id: "cicd",
     title: "CI/CD & Jenkins Pipeline",
     icon: Workflow,
-    image: "https://images.unsplash.com/photo-1618401471353-b98aadebc25a?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=1200",
     description: "High-velocity Jenkins pipelines that power rapid delivery using declarative syntax and shared libraries."
   }
 ];
@@ -29,19 +30,19 @@ const SHOWCASE_PROJECTS = [
   {
     title: "Infrastructure as Code",
     subtitle: "Terraform Module Architecture",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
     tags: ["Terraform", "HCL", "Providers"]
   },
   {
     title: "Cluster Guard",
     subtitle: "ArgoCD & Kubernetes Security",
-    image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
     tags: ["ArgoCD", "K8s", "GitOps"]
   },
   {
     title: "SwiftPipe",
     subtitle: "Automated Jenkins Pipeline Architecture",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&q=80&w=800",
     tags: ["Jenkins", "Docker", "Ansible"]
   }
 ];
@@ -211,12 +212,12 @@ export default function Projects() {
            <p className="desc max-w-xl mx-auto">Let's audit your current pipeline and see where we can inject efficiency and scale.</p>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="/inquiry" className="px-10 py-4 bg-brand-blue text-white rounded-full font-black text-xs tracking-[0.2em] uppercase hover:scale-105 transition-transform">
+          <Link to="/inquiry" className="px-10 py-4 bg-brand-blue text-white rounded-full font-black text-xs tracking-[0.2em] uppercase hover:scale-105 transition-transform">
              Start Inquiry
-          </a>
-          <a href="/contact" className="px-10 py-4 border border-brand-border hover:border-brand-blue rounded-full font-black text-xs tracking-[0.2em] uppercase transition-colors">
+          </Link>
+          <Link to="/contact" className="px-10 py-4 border border-brand-border hover:border-brand-blue rounded-full font-black text-xs tracking-[0.2em] uppercase transition-colors">
              Direct Message
-          </a>
+          </Link>
         </div>
       </section>
     </div>
