@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Send, FileText, Globe, Search, ShieldCheck, Loader2, User, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzAtus5Mjne8z2k5Edz13_VvMKd0_D7XaukAHIlz1JfPGLk-Y4VoPEzYAuDW0RMSHUl-Q/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwOBysboBRaKlYysQdo5jg5DM8AQXpjpWceutIFoP7mTpoBhyn3Ljg9A_AaubvWAGxT/exec';
 
 export default function Inquiry() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
